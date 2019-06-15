@@ -1,0 +1,53 @@
+@import "../../app";
+
+.message-container {
+  width: 100%;
+  height: 400px;
+  box-sizing: border-box;
+}
+
+.message-card {
+  background-color: @theme-color;
+  width: 100%;
+  height: 100%;
+  .flexible(column, center);
+  padding-top: 40px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 @theme-color;
+}
+
+.user-nickname {
+  .font(30px, white);
+  margin-top: 20px;
+}
+
+.user-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
+  overflow: hidden;
+}
+
+.setting-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.setting-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 20px;
+}
+
+.exit-icon {
+  width: 60px;
+  height: 54px;
+}
+
+.exit-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 20px;
+}
