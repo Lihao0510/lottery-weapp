@@ -1,7 +1,8 @@
 import Taro, {Component} from '@tarojs/taro'
-import {View, Button, Text} from '@tarojs/components'
+import {View} from '@tarojs/components'
 import {observer, inject} from '@tarojs/mobx'
 import HomeBanner from '../../components/HomeBanner';
+import UserService from '../../service/user';
 import './index.less'
 
 
@@ -11,25 +12,20 @@ class Index extends Component {
 
   config = {
     navigationBarTitleText: '首页'
-  }
+  };
 
-  componentWillMount() {
-  }
-
-  componentWillReact() {
+  constructor(props) {
+    super(props);
   }
 
   componentDidMount() {
+    this.initHomePage();
   }
 
-  componentWillUnmount() {
-  }
-
-  componentDidShow() {
-  }
-
-  componentDidHide() {
-  }
+  initHomePage = async () => {
+    const result = await UserService.helloWorld();
+    console.log('测试接口结果 ==>', result);
+  };
 
   render() {
     return (

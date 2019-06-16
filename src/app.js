@@ -1,9 +1,8 @@
+import '@tarojs/async-await';
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/mobx'
-import Index from './pages/index'
-
+import Index from './pages/index';
 import counterStore from './store/counter'
-
 import './app.less'
 
 // 如果需要在 h5 环境中开启 React Devtools
@@ -14,7 +13,7 @@ import './app.less'
 
 const store = {
   counterStore
-}
+};
 
 class App extends Component {
 
@@ -24,6 +23,7 @@ class App extends Component {
       'pages/news/index', //新闻
       'pages/order/index', //订单
       'pages/account/index', //个人中心
+      'pages/setting/index', //系统设置
     ],
     window: {
       backgroundTextStyle: 'light',

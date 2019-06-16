@@ -34,7 +34,7 @@ class Account extends Component {
         <UserMessage />
         <View className='action-group'>
           <ActionButton type='order' number={5}>订单</ActionButton>
-          <ActionButton type='credit' number={2350}>积分</ActionButton>
+          <ActionButton type='credit' number={23}>收藏</ActionButton>
           <ActionButton type='message' number={11}>消息</ActionButton>
         </View>
         <View className='help-group'>

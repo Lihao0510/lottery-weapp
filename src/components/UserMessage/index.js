@@ -10,6 +10,16 @@ class UserMessage extends Component {
     super(props);
   }
 
+  goSettingPage = () => {
+    Taro.navigateTo({
+      url: '/pages/setting/index'
+    });
+  };
+
+  handleExit = () => {
+    console.log('即将退出登录 ==>');
+  };
+
   render() {
     return (
       <View
@@ -23,13 +33,19 @@ class UserMessage extends Component {
             <Text>您尚未登录</Text>
           </View>
         </View>
-        <View className='setting-button'>
+        <View
+          onClick={this.goSettingPage}
+          className='setting-button'
+        >
           <Image
             className='setting-icon'
             src={settingIcon}
           />
         </View>
-        <View className='exit-button'>
+        <View
+          onClick={this.handleExit}
+          className='exit-button'
+        >
           <Image
             className='exit-icon'
             src={exitIcon}
